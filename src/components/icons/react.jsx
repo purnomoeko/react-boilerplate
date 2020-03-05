@@ -12,11 +12,9 @@ const Spinner = styled.div`
             transform: rotate(360deg);
         }
     }
-    @media (prefers-reduced-motion: no-preference) {
-        overflow: hidden;
-        animation: App-logo-spin infinite 20s linear;
-        animation-play-state: ${props => (props.spinning ? 'running' : 'paused')};
-    }
+    overflow: hidden;
+    animation: App-logo-spin infinite 20s linear;
+    animation-play-state: ${props => (props.spinning ? 'running' : 'paused')};
 `;
 
 const Logo = ({ width }) => {

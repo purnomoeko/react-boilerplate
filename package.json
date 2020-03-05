@@ -26,6 +26,7 @@
         "@storybook/preset-create-react-app": "^1.5.2",
         "@storybook/react": "^5.3.13",
         "chai": "^4.2.0",
+        "enzyme-to-json": "^3.4.4",
         "eslint": "^6.8.0",
         "eslint-config-airbnb": "^18.0.1",
         "eslint-plugin-import": "^2.18.2",
@@ -33,13 +34,14 @@
         "eslint-plugin-react": "^7.14.3",
         "eslint-plugin-react-hooks": "^1.7.0",
         "husky": "^4.2.3",
+        "jest-styled-components": "^7.0.0",
         "lint-staged": "^10.0.8"
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "test:coverage": "react-scripts test --coverage",
+        "test:coverage": "react-scripts test --coverage --watchAll",
         "eject": "react-scripts eject",
         "storybook": "start-storybook -h 0.0.0.0 -p 9009 -s public",
         "build-storybook": "build-storybook -s public"
@@ -47,6 +49,7 @@
     "jest": {
         "collectCoverageFrom": [
             "**/*.{js,jsx}",
+            "**/src/*.${js,jsx}",
             "!**/node_modules/**",
             "!**/coverage/**",
             "!**/serviceWorker.js",

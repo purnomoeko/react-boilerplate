@@ -1,6 +1,8 @@
 extends:
   - airbnb
 parser: babel-eslint
+plugins:
+  - prettier
 rules:
   react/jsx-props-no-spreading: 0
   react/prop-types: 0
